@@ -81,11 +81,8 @@ El proyecto está organizado de la siguiente manera:
 
 ### Endpoints/ ejemplos de uso
 
-- **Estado del Servidor:**
-  - `GET http://localhost:port/status`
-
 - **Ver version del servidor:**
-- `GET http://localhost:port/`
+- `GET http://localhost:port/version`
 
 - **Registro de Usuario:**
   - `POST http://localhost:port/user`
