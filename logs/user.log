@@ -1,0 +1,72 @@
+info: User logged in successfully {"timestamp":"2024-07-15T23:35:10.554Z"}
+info: User logged in successfully {"timestamp":"2024-07-15T23:55:14.021Z"}
+info: User found {"timestamp":"2024-07-15T23:55:53.197Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T00:12:16.198Z"}
+info: User deleted successfully with ID: 1b206a65-55b1-4abb-ba23-6c231f854d78 {"timestamp":"2024-07-16T00:12:50.674Z"}
+info: User succesfully created {"timestamp":"2024-07-16T04:40:20.615Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T04:42:17.549Z"}
+error: The data entered is incorrect {"timestamp":"2024-07-16T04:47:52.576Z"}
+info: User succesfully created {"timestamp":"2024-07-16T04:48:05.062Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:49:31.138Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:50:02.168Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:50:43.500Z"}
+info: User has been successfully updated {"timestamp":"2024-07-16T04:51:38.939Z"}
+info: User updated successfully {"timestamp":"2024-07-16T04:51:38.940Z"}
+info: User has been successfully updated {"timestamp":"2024-07-16T04:51:50.755Z"}
+info: User updated successfully {"timestamp":"2024-07-16T04:51:50.755Z"}
+info: User succesfully created {"timestamp":"2024-07-16T04:52:49.600Z"}
+info: User succesfully created {"timestamp":"2024-07-16T04:53:07.608Z"}
+info: User deleted successfully with ID: 781ed916-2e9b-4a53-ba35-70095b82f3a4 {"timestamp":"2024-07-16T04:53:25.405Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T05:00:02.323Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T05:10:38.283Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T05:15:09.150Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:15:13.306Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T05:18:41.013Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:19:27.659Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:20:26.191Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:26:37.860Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T05:27:49.308Z"}
+info: User has been successfully updated {"timestamp":"2024-07-16T05:29:40.049Z"}
+info: User updated successfully {"timestamp":"2024-07-16T05:29:40.050Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:28.411Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:38.229Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:45.844Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:50.098Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:32:07.063Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:32:17.267Z"}
+info: User has been successfully updated {"timestamp":"2024-07-16T05:32:51.389Z"}
+info: User updated successfully {"timestamp":"2024-07-16T05:32:51.391Z"}
+error: Error in login process {"timestamp":"2024-07-16T05:44:33.900Z"}
+info: User succesfully created {"timestamp":"2024-07-16T05:44:52.489Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T05:45:17.565Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:46:04.998Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:01.918Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:07.927Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:28.749Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T06:10:24.142Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T06:10:33.666Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T06:12:00.094Z"}
+info: User succesfully created {"timestamp":"2024-07-16T06:12:22.009Z"}
+info: User succesfully created {"timestamp":"2024-07-16T06:12:42.388Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T06:13:18.630Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:14:04.040Z"}
+info: User has been successfully updated {"timestamp":"2024-07-16T06:15:10.051Z"}
+info: User updated successfully {"timestamp":"2024-07-16T06:15:10.052Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:19:35.386Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:20:35.429Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:20:41.380Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:20:59.285Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:21:09.908Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:21:17.230Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T06:29:35.115Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:30:31.287Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:31:02.437Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:31:17.229Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:33:20.360Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:33:26.716Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:39:53.329Z"}
+error: Error updating user Validation error {"errors":[{"instance":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiMGU0MWM2YWUtZmY0YS00YzJlLTlkNGItNDA0MjgwYWFiZjUxIiwiaWF0IjoxNzIxMTExOTk4LCJleHAiOjE3MjExMTIwNTh9.Wj3R7Zsj4P-NbhwlASfmKFk9MD44L7mBt-r7--OUSIY","password":"MartiBnz12%","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiMGU0MWM2YWUtZmY0YS00YzJlLTlkNGItNDA0MjgwYWFiZjUxIiwiaWF0IjoxNzIxMTExMzc0LCJleHAiOjE3MjExMTIyNzR9.Y5lYJXov9Di4lnElJohQUKuf9kyW1NVh4SNzGkTsG9c","userId":"0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"},"message":"password must be unique","origin":"DB","path":"password","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"MartiBnz12%"}],"fields":{"password":"MartiBnz12%"},"name":"SequelizeUniqueConstraintError","original":{"code":"23505","constraint":"Auths_password_key36","detail":"Key (password)=(MartiBnz12%) already exists.","file":"nbtinsert.c","length":216,"line":"664","name":"error","parameters":["MartiBnz12%","0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"],"routine":"_bt_check_unique","schema":"public","severity":"ERROR","sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","table":"Auths"},"parent":{"code":"23505","constraint":"Auths_password_key36","detail":"Key (password)=(MartiBnz12%) already exists.","file":"nbtinsert.c","length":216,"line":"664","name":"error","parameters":["MartiBnz12%","0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"],"routine":"_bt_check_unique","schema":"public","severity":"ERROR","sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","table":"Auths"},"sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","stack":"Error\n    at Query.run (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n    at C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.update (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n    at async Auth.save (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\model.js:4154:35)\n    at async Auth.update (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\model.js:4343:12)\n    at async Function.updateUser (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\src\\model\\user.ts:84:21)\n    at async updateUser (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\src\\controller\\user.ts:76:28)","timestamp":"2024-07-16T06:40:00.327Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:41:49.909Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:41:59.939Z"}
+info: Server running on port 1909 {"timestamp":"2024-07-16T06:42:25.498Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:42:32.545Z"}

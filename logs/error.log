@@ -1,0 +1,24 @@
+error: The data entered is incorrect {"timestamp":"2024-07-16T04:47:52.576Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:49:31.138Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:50:02.168Z"}
+error: Error updating user {"timestamp":"2024-07-16T04:50:43.500Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:28.411Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:38.229Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:45.844Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:30:50.098Z"}
+error: Error in login process {"timestamp":"2024-07-16T05:44:33.900Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:46:04.998Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:01.918Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:07.927Z"}
+error: Error updating user {"timestamp":"2024-07-16T05:47:28.749Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:14:04.040Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:19:35.386Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:20:41.380Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:20:59.285Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:21:17.230Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:30:31.287Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:31:17.229Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:33:26.716Z"}
+error: Error updating user Validation error {"errors":[{"instance":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiMGU0MWM2YWUtZmY0YS00YzJlLTlkNGItNDA0MjgwYWFiZjUxIiwiaWF0IjoxNzIxMTExOTk4LCJleHAiOjE3MjExMTIwNTh9.Wj3R7Zsj4P-NbhwlASfmKFk9MD44L7mBt-r7--OUSIY","password":"MartiBnz12%","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiMGU0MWM2YWUtZmY0YS00YzJlLTlkNGItNDA0MjgwYWFiZjUxIiwiaWF0IjoxNzIxMTExMzc0LCJleHAiOjE3MjExMTIyNzR9.Y5lYJXov9Di4lnElJohQUKuf9kyW1NVh4SNzGkTsG9c","userId":"0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"},"message":"password must be unique","origin":"DB","path":"password","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"MartiBnz12%"}],"fields":{"password":"MartiBnz12%"},"name":"SequelizeUniqueConstraintError","original":{"code":"23505","constraint":"Auths_password_key36","detail":"Key (password)=(MartiBnz12%) already exists.","file":"nbtinsert.c","length":216,"line":"664","name":"error","parameters":["MartiBnz12%","0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"],"routine":"_bt_check_unique","schema":"public","severity":"ERROR","sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","table":"Auths"},"parent":{"code":"23505","constraint":"Auths_password_key36","detail":"Key (password)=(MartiBnz12%) already exists.","file":"nbtinsert.c","length":216,"line":"664","name":"error","parameters":["MartiBnz12%","0e41c6ae-ff4a-4c2e-9d4b-404280aabf51"],"routine":"_bt_check_unique","schema":"public","severity":"ERROR","sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","table":"Auths"},"sql":"UPDATE \"Auths\" SET \"password\"=$1 WHERE \"userId\" = $2","stack":"Error\n    at Query.run (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n    at C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.update (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n    at async Auth.save (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\model.js:4154:35)\n    at async Auth.update (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\node_modules\\sequelize\\src\\model.js:4343:12)\n    at async Function.updateUser (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\src\\model\\user.ts:84:21)\n    at async updateUser (C:\\Users\\tatia\\OneDrive\\Escritorio\\tp-final-ada\\src\\controller\\user.ts:76:28)","timestamp":"2024-07-16T06:40:00.327Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:41:59.939Z"}
+error: Error updating user {"timestamp":"2024-07-16T06:42:32.545Z"}
