@@ -91,3 +91,6 @@ info: User logged in successfully {"timestamp":"2024-07-16T19:41:37.583Z"}
 info: User succesfully created {"timestamp":"2024-07-16T19:43:05.698Z"}
 info: User deleted successfully with email: santi@gmail.com {"timestamp":"2024-07-16T19:43:25.215Z"}
 info: Successful logout {"timestamp":"2024-07-16T19:44:31.639Z"}
+info: Server running on port 5498 {"timestamp":"2024-07-16T20:15:28.859Z"}
+info: User succesfully created {"timestamp":"2024-07-16T20:15:33.914Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T20:17:35.993Z"}
