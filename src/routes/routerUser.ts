@@ -11,7 +11,7 @@ userRouter.post('/login', UserController.login);
 userRouter.get('/me/:email', authorizeUser, UserController.getUser);
 userRouter.patch('/me/:id', authorizeUser, UserController.updateUser);
 userRouter.delete("/logout", authorizeUser, UserController.logout);
-userRouter.delete("/user/:id", authorizeUser, UserController.deleteUser);
+userRouter.delete("/me/:id", authorizeUser, UserController.deleteUser);
 
 userRouter.use('*', (_req, res) => {
     res.status(404).json({ message: 'Resource not found' });

@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from "express"
+import logger from '../utils/logs';
 
 const logRequest = (req: Request, res: Response, next: NextFunction) => {
     const { method, url } = req
-    console.log(`${method} ${url}`)
-
+    logger.info(`${method} ${url}`);
     next()
 }
 

@@ -1,9 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import {
-    generateAccessToken,
-    verifyToken,
-    verifyRefreshToken,
-} from "../utils/jwt";
+import {generateAccessToken,verifyToken,verifyRefreshToken} from "../utils/jwt";
 import Auth from "../model/auth";
 
 async function validateUserAccessToken(userId: string, apiAccessToken: string) {
@@ -32,13 +28,13 @@ async function authorizeUser(req: Request, res: Response, next: NextFunction) {
     try {
         const decoded = verifyToken(accessToken) as any;
         if (!(await validateUserAccessToken(decoded.data, accessToken)))
-            return res.status(404).json({ error: "Wrong Credentials" });
+            return res.status(404).json({ error: "Invalid Credentials" });
         next();
     } catch (error) {
         try {
             const refresh = verifyRefreshToken(refreshToken) as any;
             if (!(await validateUserRefreshToken(refresh.data, refreshToken)))
-                return res.status(404).json({ error: "Wrong Credentials" });
+                return res.status(404).json({ error: "Invalid Credentials" });
 
             const newAccessToken = generateAccessToken(refresh.data);
 

@@ -55,12 +55,10 @@ abstract class UserController {
     static async updateUser(req: Request, res: Response) {
         const { id } = req.params;
         const userData = req.body;
-    
+
         try {
-            // Extraer las propiedades específicas que se pueden actualizar
             const { username, fullname, password, email, nationality } = req.body;
-            
-            // Validar los datos que se pueden actualizar
+
             const dataToValidate = {
                 username,
                 fullname,
@@ -68,61 +66,58 @@ abstract class UserController {
                 email,
                 nationality,
             };
-    
+
             const validatedData = validatePartialUser(dataToValidate);
             if (!validatedData.success) {
-                logger.error("Wrong credentials");
-                return res.status(400).json({ message: "Wrong credentials" });
-            }
-    
-            // Actualizar el usuario en la base de datos
+                logger.error("Invalid credentials");
+                return res.status(400).json({ message: "Invalid credentials" });
+            };
+
             const result = await User.updateUser(id, userData);
             if (!result) {
                 logger.error("User not found or no changes made");
                 return res.status(404).json({ message: 'User not found or no changes made' });
-            }
-    
+            };
+
             logger.info("User updated successfully");
             return res.status(200).json({ message: 'User updated successfully' });
-    
+
         } catch (error) {
             logger.error("Error updating user", error);
             return res.status(500).json({ error: 'Error updating user' });
-        }
-    }
-    
+        };
+    };
 
     static async deleteUser(req: Request, res: Response) {
-        const { id } = req.params;
+        const { email } = req.body;
 
         try {
-            const deleted = await User.deleteUser(id);
+            const deleted = await User.deleteUser(email);
             if (!deleted) {
-                logger.error(`User with ID ${id} not found or no changes made`);
+                logger.error(`User with email ${email} not found or no changes made`);
                 return res.status(404).json({ message: 'User not found or no changes made' });
             }
 
-            logger.info(`User deleted successfully with ID: ${id}`);
+            logger.info(`User deleted successfully with email: ${email}`);
             return res.status(200).json({ message: 'User deleted successfully' });
-
         } catch (error) {
             logger.error(`Error deleting user`);
             return res.status(500).json({ message: 'Error deleting user' });
-        }
-    }
+        };
+    };
 
     static async login(req: Request, res: Response) {
         try {
             const validatedData = validatePartialUser(req.body);
             if (!validatedData.success) {
-                logger.error("Wrong credentials");
-                return res.status(400).json({ message: "Wrong credentials..." });
-            }
+                logger.error("Invalid  credentials");
+                return res.status(400).json({ message: "Invalid credentials" });
+            };
 
             const { email, password } = validatedData.data as any;
             const user = await User.login({ email, password });
             if (!user)
-                return res.status(500).json({ message: "Wrong credentials" });
+                return res.status(500).json({ message: "Invalid credentials" });
 
             const { accessToken, refreshToken } = user as any;
 
@@ -136,34 +131,42 @@ abstract class UserController {
                 .send({
                     message: "User logged in successfully",
                     accessToken: accessToken
-
-
                 });
+
             logger.info("User logged in successfully");
+
         } catch (error) {
             logger.error("Error in login process");
             return res.status(500).json({ message: "Error in login process" });
-        }
-    }
+        };
+    };
 
     static async logout(req: Request, res: Response) {
-        const validatedData = validatePartialUser(req.body);
-        if (!validatedData.success) {
-            logger.error("Wrong credentials");
-            return res.status(400).json({ message: "Wrong credentials" });
-        }
+        try {
+            const validatedData = validatePartialUser(req.body);
+            if (!validatedData.success) {
+                logger.error("Invalid credentials");
+                return res.status(400).json({ message: "Invalid credentials" });
+            };
 
-        const { email } = validatedData.data as any;
+            const { email } = validatedData.data as any;
 
-        const userLogOut = await User.logout(email);
+            const userLogOut = await User.logout(email);
 
-        if (userLogOut == 200) {
-            logger.info("Sucessful logout");
-            return res.status(200).json({ message: "Sucessful logout" });
-        }
-        logger.error("Error at logout");
-        return res.status(500).json({ message: "Error at logout" });
-    }
-}
+            if (userLogOut == 200) {
+                logger.info("Successful logout");
+                return res.status(200).json({ message: "Successful logout" });
+            } else {
+                logger.error("Error at logout");
+                return res.status(500).json({ message: "Error at logout" });
+            };
+
+        } catch (error) {
+            logger.error("Unexpected error at logout: ", error);
+            return res.status(500).json({ message: "Unexpected error at logout" });
+        };
+    };
+
+};
 
 export default UserController;

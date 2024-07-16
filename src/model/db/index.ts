@@ -16,8 +16,8 @@ async function testConnection() {
         return await sequelize.authenticate();
     } catch (error) {
         return new Error('Cannot establish connection to the server');
-    }
-}
+    };
+};
 
 export { testConnection, DataTypes, Model };
 export default sequelize;

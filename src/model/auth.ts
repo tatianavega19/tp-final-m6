@@ -12,12 +12,13 @@ class Auth extends Model {
             refreshToken: null,
         });
         return newAuth;
-    }
+    };
+
     static async getUser(userID: string) {
         const user = await Auth.findByPk(userID);
         if (!user) return false;
         return user;
-    }
+    };
 
     static async updateUserAccessToken(userId: string, accessToken: string) {
         const auth = await this.getUser(userId);
@@ -27,8 +28,9 @@ class Auth extends Model {
             return true;
         }
         return { error: "Please login again" };
-    }
-}
+    };
+};
+
 Auth.init(
     {
         userId: {
@@ -58,7 +60,5 @@ Auth.init(
     }
 );
 (async () => await Auth.sync({ alter: true }))();
-
-// (async () => await Auth.drop())();
 
 export default Auth;

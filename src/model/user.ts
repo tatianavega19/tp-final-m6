@@ -1,11 +1,7 @@
 import sequelize, { DataTypes, Model } from './db/index';
 import Sequelize from "sequelize";
 import Auth from "../model/auth";
-import {
-    getSalt,
-    hashSeasonPassword,
-    compareHashes,
-} from "../utils/password-hashh";
+import { getSalt, hashSeasonPassword, compareHashes } from "../utils/password-hash";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 
 class User extends Model {
@@ -16,18 +12,20 @@ class User extends Model {
             onDelete: "CASCADE",
             as: "auth",
         });
-    }
+    };
+
     private static async createHashedSeasonPassword(password: string) {
         const salt = getSalt();
         const hashPassword = hashSeasonPassword(password, salt).toString("hex");
         const hashedPassword = `${salt}:${hashPassword}`;
         return hashedPassword;
-    }
+    };
 
     static async getUser(email: string) {
         const userInfo = await User.findOne({ where: { email } });
         return { userInfo };
-    }
+    };
+
     static async createUser(userData: any) {
         const { username, fullname, password, email, birthdate, nationality } =
             userData;
@@ -39,7 +37,7 @@ class User extends Model {
         });
         if (existingUser) {
             return { error: "User with the provided email already exists" };
-        }
+        };
 
         const hashedPassword = await this.createHashedSeasonPassword(password);
 
@@ -59,7 +57,8 @@ class User extends Model {
             message: `User ${fullname} created successfully`,
             id: newUser.dataValues.id,
         };
-    }
+    };
+
     static async updateUser(id: string, userdata: any) {
         const { username, fullname, password, email, nationality, birthdate } = userdata
         const result = await User.findOne({ where: { id } });
@@ -83,18 +82,20 @@ class User extends Model {
                 if (auth) {
                     await auth.update({ password });
                     await auth.save();
-                }
-            }
+                };
+            };
 
             return result;
-        }
+        };
         return 404;
-    }
+    };
 
-    static async deleteUser(id: string) {
-        const user = await User.findOne({ where: { id } });
+    static async deleteUser(email: string) {
+        const user = await User.findOne({ where: { email } });
 
         if (!user) return 400;
+
+        const id = user.dataValues.id;
 
         try {
             await User.destroy({
@@ -106,8 +107,8 @@ class User extends Model {
             return 200;
         } catch (error) {
             return 400;
-        }
-    }
+        };
+    };
 
     static async login(userCredentials: any) {
         const { email, password } = userCredentials;
@@ -142,23 +143,27 @@ class User extends Model {
 
             };
         };
-        return { error: 'Wrong credentials....!' };;
+        return { error: 'Invalid credentials' };;
     };
 
     static async logout(email: string) {
         try {
             const user = await User.getUser(email);
-            const id = user.userInfo?.dataValues.id;
+
+            if (!user || !user.userInfo) {
+                return 400; 
+            };
+
+            const id = user.userInfo.dataValues.id;
             await Auth.update({ refreshToken: null }, { where: { userId: id } });
+
             return 200;
         } catch (error) {
             return 500;
         };
     };
 
-
 };
-
 
 User.init(
     {
@@ -195,16 +200,17 @@ User.init(
         timestamps: false,
     }
 );
+
 User.hasOne(Auth, {
     foreignKey: {
         name: "userId",
         allowNull: false,
     },
 });
+
 Auth.belongsTo(User, {
     foreignKey: "userId",
 });
-
 
 (async () => await User.sync({ alter: true }))();
 

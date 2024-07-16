@@ -70,3 +70,24 @@ info: Server running on port 1909 {"timestamp":"2024-07-16T06:41:49.909Z"}
 error: Error updating user {"timestamp":"2024-07-16T06:41:59.939Z"}
 info: Server running on port 1909 {"timestamp":"2024-07-16T06:42:25.498Z"}
 error: Error updating user {"timestamp":"2024-07-16T06:42:32.545Z"}
+info: Server running on port 5498 {"timestamp":"2024-07-16T19:17:59.862Z"}
+info: User succesfully created {"timestamp":"2024-07-16T19:18:06.468Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T19:20:20.669Z"}
+info: User updated successfully {"timestamp":"2024-07-16T19:22:09.923Z"}
+info: User succesfully created {"timestamp":"2024-07-16T19:22:49.494Z"}
+info: User succesfully created {"timestamp":"2024-07-16T19:23:04.209Z"}
+info: User deleted successfully with ID: 6cd53dfc-1bdf-4d22-ab04-55b2ded4fd72 {"timestamp":"2024-07-16T19:23:56.951Z"}
+error: Error at logout {"timestamp":"2024-07-16T19:24:24.852Z"}
+error: Error at logout {"timestamp":"2024-07-16T19:25:00.704Z"}
+info: Server running on port 5498 {"timestamp":"2024-07-16T19:29:11.872Z"}
+error: Error at logout {"timestamp":"2024-07-16T19:29:51.670Z"}
+info: Server running on port 5498 {"timestamp":"2024-07-16T19:32:19.355Z"}
+info: Successful logout {"timestamp":"2024-07-16T19:32:25.546Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T19:39:41.814Z"}
+info: Server running on port 5498 {"timestamp":"2024-07-16T19:41:02.693Z"}
+info: User succesfully created {"timestamp":"2024-07-16T19:41:08.320Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T19:41:34.254Z"}
+info: User logged in successfully {"timestamp":"2024-07-16T19:41:37.583Z"}
+info: User succesfully created {"timestamp":"2024-07-16T19:43:05.698Z"}
+info: User deleted successfully with email: santi@gmail.com {"timestamp":"2024-07-16T19:43:25.215Z"}
+info: Successful logout {"timestamp":"2024-07-16T19:44:31.639Z"}
