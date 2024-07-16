@@ -34,43 +34,42 @@ Se utiliza supabase (https://supabase.com/) como sistema de gestión de bases de
 
 El proyecto está organizado de la siguiente manera:
 
-/src
-/constants
-- index.ts
-/controllers
-- database.ts
-- user.ts
-/logs
-- error.log
-- user.log
-/middlewares
-- request-logger.ts
-- token-validator.ts
-- wrong-method-handler.ts
-- wrong-url-handler.ts
-/models
- /db
-  - db_sync.ts
+- src
+ - constants
   - index.ts
-- auth.ts
-- user.ts
-/research
-- helmet.md
-- paginacion.md
-- refresh-tokens.md
-- winston.md
-/routes
-- routerIndex.ts
-- routerUser.ts
-/schemas
-- users.ts
-/utils
-- jwt.ts
-- logs.ts
-- password-hash.ts
-app.ts
-index.ts
-
+ - controllers
+  - database.ts
+  - user.ts
+ - logs
+  - error.log
+  - user.log
+ - middlewares
+  - request-logger.ts
+  - token-validator.ts
+  - wrong-method-handler.ts
+  - wrong-url-handler.ts
+ - models
+  - db
+   - db_sync.ts
+   - index.ts
+  - auth.ts
+  - user.ts
+ - research
+  - helmet.md
+  - paginacion.md
+  - refresh-tokens.md
+  - winston.md
+ - routes
+  - routerIndex.ts
+  - routerUser.ts
+ - schemas
+  - users.ts
+ - utils
+  - jwt.ts
+  - logs.ts
+  - password-hash.ts
+ - app.ts
+ - index.ts
 - .env
 - .gitignore
 - package-lock.json
@@ -114,7 +113,7 @@ index.ts
 
 - **Update:**
   - `PATCH http://localhost:port/me/:id`
-  - Authorization: `bearer exampletoken`
+  - Requiere autorizacion: `bearer exampletoken`
   - Ejemplo de Body:
     ```json
     {
@@ -126,7 +125,7 @@ index.ts
 
 - **getUser:**
   - `GET http://localhost:port/me/:email`
-  - Authorization: `bearer exampletoken`
+  - Requiere autorizacion: `bearer exampletoken`
   - Ejemplo de Body:
     ```json
     {
@@ -136,11 +135,11 @@ index.ts
 
 - **DeleteUser:**
   - `DELETE /user/:id`
-  - Authorization: `bearer exampletoken`
+  - Requiere autorizacion: `bearer exampletoken`
 
 - **logout:**
   - `DELETE /logout`
-  - Authorization: `bearer exampletoken`
+  - Requiere autorizacion: `bearer exampletoken`
 
 ### Tokens de Actualización
 
