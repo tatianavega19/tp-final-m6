@@ -76,6 +76,9 @@ El proyecto está organizado de la siguiente manera:
 - package.json
 - README.md
 - tsconfig.json
+- logs
+ - error.log
+ - user.log
 
 ## Documentación y Ejemplos
 
